@@ -6,17 +6,21 @@ import './App.css'
 import AddCars from './components/AddCars'
 import View from './components/View'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddCars/>
+      
       <BrowserRouter>
+      <Navbar/>
       <Routes>
+      
         <Route path = "/view" element={<View />}/>
-      </Routes>
+        <Route path = "/add" element={<AddCars/>}/>
+        </Routes>
       </BrowserRouter>
     </>
   )
